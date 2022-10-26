@@ -1,75 +1,407 @@
 <!DOCTYPE html>
-<html lang="en"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-  <title>Enie</title>
-  <base href=".">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <link rel="icon" id="appIcon" href="https://enie.nl.cdn.enie.dev/configurator/assets/img/favicon.ico">
-  <meta name="theme-color" content="#ffffff">
-  <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAy3V_xn_MZ0FQhniD4PAztdgHrH_ub4d4&libraries=places"></script>
-<style>@import url(https://fonts.googleapis.com/css2?family=Rubik:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap);html{background-color:#fff;-webkit-tap-highlight-color:transparent}html{-moz-tab-size:4;tab-size:4;line-height:1.15;-webkit-text-size-adjust:100%}body{margin:0;font-family:system-ui,-apple-system,Segoe UI,Roboto,Helvetica,Arial,sans-serif,Apple Color Emoji,Segoe UI Emoji}html{font-family:Rubik;line-height:1.5}body{font-family:inherit;line-height:inherit}*,:after,:before{box-sizing:border-box;border:0 solid}*,:after,:before{--tw-translate-x:0;--tw-translate-y:0;--tw-rotate:0;--tw-skew-x:0;--tw-skew-y:0;--tw-scale-x:1;--tw-scale-y:1;--tw-transform:translateX(var(--tw-translate-x)) translateY(var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));--tw-border-opacity:1;border-color:rgba(229,231,235,var(--tw-border-opacity));--tw-ring-inset:var(--tw-empty,/*!*/ /*!*/);--tw-ring-offset-width:0px;--tw-ring-offset-color:#fff;--tw-ring-color:#3b82f680;--tw-ring-offset-shadow:0 0 #0000;--tw-ring-shadow:0 0 #0000;--tw-shadow:0 0 #0000;--tw-blur:var(--tw-empty,/*!*/ /*!*/);--tw-brightness:var(--tw-empty,/*!*/ /*!*/);--tw-contrast:var(--tw-empty,/*!*/ /*!*/);--tw-grayscale:var(--tw-empty,/*!*/ /*!*/);--tw-hue-rotate:var(--tw-empty,/*!*/ /*!*/);--tw-invert:var(--tw-empty,/*!*/ /*!*/);--tw-saturate:var(--tw-empty,/*!*/ /*!*/);--tw-sepia:var(--tw-empty,/*!*/ /*!*/);--tw-drop-shadow:var(--tw-empty,/*!*/ /*!*/);--tw-filter:var(--tw-blur) var(--tw-brightness) var(--tw-contrast) var(--tw-grayscale) var(--tw-hue-rotate) var(--tw-invert) var(--tw-saturate) var(--tw-sepia) var(--tw-drop-shadow)}</style><link rel="stylesheet" href="./Configurator _ enie.nl_files/styles.cb91b5fc6cb9031193da.css" media="all" onload="this.media=&#39;all&#39;"><noscript><link rel="stylesheet" href="styles.cb91b5fc6cb9031193da.css"></noscript><script async="" src="./Configurator _ enie.nl_files/clarity.js.download"></script><script type="text/javascript" async="" src="./Configurator _ enie.nl_files/js"></script><script async="" src="./Configurator _ enie.nl_files/9knui1xz2y"></script><script async="" src="./Configurator _ enie.nl_files/fbevents.js.download"></script><script type="text/javascript" async="" src="./Configurator _ enie.nl_files/hotjar-2292235.js.download"></script><script type="text/javascript" async="" src="./Configurator _ enie.nl_files/f.txt"></script><script type="text/javascript" async="" src="./Configurator _ enie.nl_files/analytics.js.download"></script><script type="text/javascript" src="./Configurator _ enie.nl_files/gtm.js.download"></script><style>.content[_ngcontent-kvj-c53]{background-image:url(background.1b80675b9e30505fc655.png);background-position-x:80%;background-position-y:center;background-size:cover}@media (min-width: 768px){.content[_ngcontent-kvj-c53]{background-position-x:50%}}</style><meta http-equiv="origin-trial" content="A7bG5hJ4XpMV5a3V1wwAR0PalkFSxLOZeL9D/YBYdupYUIgUgGhfVJ1zBFOqGybb7gRhswfJ+AmO7S2rNK2IOwkAAAB7eyJvcmlnaW4iOiJodHRwczovL3d3dy5nb29nbGV0YWdtYW5hZ2VyLmNvbTo0NDMiLCJmZWF0dXJlIjoiUHJpdmFjeVNhbmRib3hBZHNBUElzIiwiZXhwaXJ5IjoxNjY5NzY2Mzk5LCJpc1RoaXJkUGFydHkiOnRydWV9"><script type="text/javascript" async="" src="./Configurator _ enie.nl_files/f(1).txt"></script><script async="" src="./Configurator _ enie.nl_files/modules.bcd9ade6b0bb9bdd0789.js.download" charset="utf-8"></script><style type="text/css">iframe#_hjRemoteVarsFrame {display: none !important; width: 1px !important; height: 1px !important; opacity: 0 !important; pointer-events: none !important;}</style></head>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <title>Configurator</title>
+    <base href="/">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="icon" id="appIcon" href="assets/favicon/favicon.ico">
+    <link href="https://unpkg.com/tailwindcss@^1.0/dist/tailwind.min.css" rel="stylesheet">
+    <meta name="theme-color" content="#ffffff">
+    <style>
+        @import url(https://fonts.googleapis.com/css2?family=Rubik:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap);
+
+        html {
+            background-color: #fff;
+            -webkit-tap-highlight-color: transparent
+        }
+
+        html {
+            -moz-tab-size: 4;
+            tab-size: 4;
+            line-height: 1.15;
+        }
+
+        body {
+            margin: 0;
+            font-family: system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial, sans-serif, Apple Color Emoji, Segoe UI Emoji
+        }
+
+        html {
+            font-family: Rubik;
+            line-height: 1.5
+        }
+
+        body {
+            font-family: inherit;
+            line-height: inherit
+        }
+
+        .progress .progress-step.active {
+            background: transparent linear-gradient(46deg,#FCCC01 0%,#F38220 100%) 0 0 no-repeat padding-box;
+            color: #fff;
+        }
+
+        .label {
+            left: 35px;
+            top: 50px;
+            transform: none;
+        }
+        *,
+        :after,
+        :before {
+            box-sizing: border-box;
+            border: 0 solid
+        }
+
+        .heft {
+            background: #FFFFFF 0 0 no-repeat padding-box;
+            box-shadow: 0 2px 15px #0000004d;
+            border-radius: 33px;
+            min-height: 73px;
+            padding-left: 73px;
+            transition: all .3s;
+            width: 280px;
+            padding-top: 17px;
+        }
+
+        .icon{
+            width: 73px;
+            height: 73px;
+            background: transparent linear-gradient(46deg,#FCCC01 0%,#F38220 100%) 0 0 no-repeat padding-box;
+            box-shadow: 0 2px 15px #0000001a;
+            border: 3px solid #FFFFFF;
+            border-radius: 50%;
+            position: absolute;
+            left: 0;
+            top: 0;
+            transition: all .3s;
+        }
+
+        .cont {
+            max-width: 1500px;
+        }
+
+        :after,
+        :before {
+            --tw-translate-x: 0;
+            --tw-translate-y: 0;
+            --tw-rotate: 0;
+            --tw-skew-x: 0;
+            --tw-skew-y: 0;
+            --tw-scale-x: 1;
+            --tw-scale-y: 1;
+            --tw-transform: translateX(var(--tw-translate-x)) translateY(var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
+            --tw-border-opacity: 1;
+            border-color: rgba(229, 231, 235, var(--tw-border-opacity));
+            --tw-ring-inset: var(--tw-empty,
+                    /*!*/
+                    /*!*/
+                );
+            --tw-ring-offset-width: 0px;
+            --tw-ring-offset-color: #fff;
+            --tw-ring-color: #3b82f680;
+            --tw-ring-offset-shadow: 0 0 #0000;
+            --tw-ring-shadow: 0 0 #0000;
+            --tw-shadow: 0 0 #0000;
+            --tw-blur: var(--tw-empty,
+                    /*!*/
+                    /*!*/
+                );
+            --tw-brightness: var(--tw-empty,
+                    /*!*/
+                    /*!*/
+                );
+            --tw-contrast: var(--tw-empty,
+                    /*!*/
+                    /*!*/
+                );
+            --tw-grayscale: var(--tw-empty,
+                    /*!*/
+                    /*!*/
+                );
+            --tw-hue-rotate: var(--tw-empty,
+                    /*!*/
+                    /*!*/
+                );
+            --tw-invert: var(--tw-empty,
+                    /*!*/
+                    /*!*/
+                );
+            --tw-saturate: var(--tw-empty,
+                    /*!*/
+                    /*!*/
+                );
+            --tw-sepia: var(--tw-empty,
+                    /*!*/
+                    /*!*/
+                );
+            --tw-drop-shadow: var(--tw-empty,
+                    /*!*/
+                    /*!*/
+                );
+            --tw-filter: var(--tw-blur) var(--tw-brightness) var(--tw-contrast) var(--tw-grayscale) var(--tw-hue-rotate) var(--tw-invert) var(--tw-saturate) var(--tw-sepia) var(--tw-drop-shadow)
+        }
+    </style>
+    <link rel="stylesheet" href="./style/styles.cb91b5fc6cb9031193da.css" media="print" onload="this.media='all'">
+    <noscript>
+        <link rel="stylesheet" href="./style/styles.cb91b5fc6cb9031193da.css"></noscript>
+</head>
+
 <body>
-
-  <app-root ng-version="12.2.13"><router-outlet></router-outlet><configurator-power-usage _nghost-kvj-c53="">
-
-    <a _ngcontent-kvj-c53="" target="_blank" class="absolute" href="https://enie.nl/">
-      <img _ngcontent-kvj-c53="" class="w-32 md:w-44 pl-8 pt-8" src="./Configurator _ enie.nl_files/enie-logo-light.svg">
-    </a>
-    <div _ngcontent-kvj-c53="" class="w-screen h-screen flex flex-col items-center justify-center py-6 px-6 lg:py-0 lg:px-12 content" style="background-image: url(&quot;https://enie.nl.cdn.enie.dev/configurator/assets/img/background-home.jpg&quot;);">
-      <div _ngcontent-kvj-c53="" class="hidden md:block text-center font-thin text-white drop-shadow py-4">
-        <div _ngcontent-kvj-c53="" class="text-3xl md:text-5xl pb-4 md:pb-8">Solar energy for everyone
-          .</div>
-        <div _ngcontent-kvj-c53="" class="text-2xl md:text-4xl md:pb-8">It's possible.</div>
-      </div>
-      <div _ngcontent-kvj-c53="" class="shadow-lg rounded-4xl p-6 md:p-10 lg:px-10 border bg-white" style="z-index: 1;">
-        <div _ngcontent-kvj-c53="" class="text-enie-gray-500 text-2xl pb-6 sm:pb-0 pt-2 text-center lg:text-left font-medium">How much do solar panels provide you?
-          ?</div>
-        <div _ngcontent-kvj-c53="" class="hidden sm:block text-enie-gray-500 text-lg pb-6 pt-2 text-center lg:text-left font-thin">Calculate immediately how many solar panels you need, how much electricity they generate and what you save.</div>
-        <div _ngcontent-kvj-c53="" class="shadow-lg border rounded-3xl flex flex-col lg:flex-row lg:items-center lg:justify-between px-6 py-6 lg:py-2">
-          <div _ngcontent-kvj-c53="" class="flex flex-col lg:flex-row lg:items-center pb-3 space-y-2 lg:space-x-3 lg:space-y-0">
-            <component-input-text _ngcontent-kvj-c53="" id="zipcode" class="lg:w-40 ng-untouched ng-pristine ng-invalid">
-              <div class="pb-3"></div><div class="relative">
-                <input placeholder="placeholder"  class="peer placeholder-transparent shadow-sm focus:ring-0 focus:border-gray-900 block w-full border-gray-400 rounded-md ng-untouched ng-pristine ng-valid" id="searchTextField" type="text">
-                <label class="absolute left-2 -top-3 bg-white text-gray-700 text-sm transition-all peer-placeholder-shown:text-base peer-placeholder-shown:text-enie-gray-100 peer-focus:-top-3 peer-focus:text-gray-700 peer-focus:text-sm peer-focus:bg-white px-1 peer-placeholder-shown:top-2.5" >Postcode</label>
-                </div>
-              </component-input-text><component-input-text _ngcontent-kvj-c53="" id="housenumber" valuetype="number" class="lg:w-40 ng-untouched ng-pristine ng-invalid">
-                  <div class="pb-3"></div>
-                  <div class="relative">
-                    <input placeholder="placeholder" autocomplete="off" class="peer placeholder-transparent shadow-sm focus:ring-0 focus:border-gray-900 block w-full border-gray-400 rounded-md ng-untouched ng-pristine ng-valid" id="houseInput" type="number">
-
-                    <label class="absolute left-2 -top-3 bg-white text-gray-700 text-sm transition-all peer-placeholder-shown:text-base peer-placeholder-shown:text-enie-gray-100 peer-focus:-top-3 peer-focus:text-gray-700 peer-focus:text-sm peer-focus:bg-white px-1 peer-placeholder-shown:top-2.5" 
-                    for="housenumber-input">Home address</label>
-                    </div>
-
-                  </component-input-text>
-                  <component-input-select _ngcontent-kvj-c53="" id="housenumber_addition" class="lg:w-40 ng-untouched ng-pristine ng-valid">
-                      <div class="pb-3"></div><div class="relative">
-                        <select class="peer placeholder-transparent shadow-sm focus:ring-0 focus:border-gray-900 block w-full border-gray-400 rounded-md ng-untouched ng-pristine ng-valid" id="housenumber_addition-input">
-                        <option value="0: null">No</option>
-                      </select>
-                      <label class="absolute left-2 -top-3 bg-white text-gray-700 text-sm transition-all px-1 empty" for="housenumber_addition-input">Add.</label>
+    <app-root  ee="">
+        <router-outlet ></router-outlet>
+        <layout-main _nghost-dcy-c35="" >
+            <div 
+                class="flex flex-col items-center justify-center p-3 md:p-6 lg:p-8 bg-gray-50 overflow-scroll md:overflow-auto md:h-screen">
+                <a target="_blank" class="mb-4 mt-2 md:mb-8" href="https://enie.nl" >
+                    <img  alt="logo"
+                        class="h-8 md:h-12"
+                        src="https://enie.nl.cdn.enie.dev/configurator/assets/img/enie-logo-dark.svg"
+                        style="transform: scale(1); " _mstalt="47853">
+                    </a>
+                <!---->
+                <!---->
+                <!---->
+                <div 
+                    class="cont max-w-8xl shadow-xl rounded-t-3xl md:rounded-3xl h-full w-full overflow-hidden bg-white border"
+                    >
+                    <div  class="grid md:grid-cols-20 h-full" >
+                        <div 
+                            class="progress md:col-span-1 h-full flex md:flex-col items-center justify-center text-enie-gray-500 font-thin space-x-3 md:space-y-4 md:space-x-0 h-20 pb-8 md:pb-0 md:h-auto"
+                            >
+                            <div 
+                                class="progress-step text-xs md:text-base w-6 h-6 md:w-8 md:h-8 rounded-full flex items-center justify-center active number-offset"
+                                 _msthash="2609945" _msttexthash="4459"> 1 </div>
+                            <div 
+                                class="progress-step text-xs md:text-base w-6 h-6 md:w-8 md:h-8 rounded-full flex items-center justify-center"
+                                 _msthash="2609946" _msttexthash="4550"> 2 </div>
+                            <div 
+                                class="progress-step text-xs md:text-base w-6 h-6 md:w-8 md:h-8 rounded-full flex items-center justify-center"
+                                 _msthash="2609947" _msttexthash="4641"> 3 </div>
+                            <!---->
                         </div>
-                      </component-input-select>
-                    </div>
-                        <button _ngcontent-kvj-c53="" id="start_configurator_button" type="button" class="button primary lg:ml-20"> Calculate price</button>
-                  </div>
-                        <div _ngcontent-kvj-c53="" class="flex items-center justify-center px-6 pt-6 flex-row lg:justify-between"><div _ngcontent-kvj-c53="" class="flex items-center">
-                          <img _ngcontent-kvj-c53="" src="./Configurator _ enie.nl_files/google.png" alt="google" class="w-7 h-7 mr-2"><div _ngcontent-kvj-c53="" class="flex items-center text-yellow-400 stars">
-                            <span _ngcontent-kvj-c53="" style="width: 91%;"></span></div></div><div _ngcontent-kvj-c53="" class="hidden lg:flex items-center space-x-4 text-gray-500 text-sm"><div _ngcontent-kvj-c53="" class="flex items-center">
-
-                              </path></svg> Rent or buy </div><div _ngcontent-kvj-c53="" class="flex items-center"><svg _ngcontent-kvj-c53="" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" class="h-5 w-5 mr-1">
-                                <path _ngcontent-kvj-c53="" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg> Instant savings </div><div _ngcontent-kvj-c53="" class="flex items-center">
-
-                                  </path></svg> Installed within 6-8 weeks
+                        <!---->
+                        <div  class="w-full h-full md:col-span-10 sm:h-auto h-52"
+                            >
+                            <component-preview  class="w-full" _nghost-dcy-c34="">
+                                <div _ngcontent-dcy-c34="" class="preview h-full w-full relative"
+                                    style="background-image: url(&quot;https://true-ortho.int.enie.dev/api/readar/map?zipcode=3061SB&amp;house_number=10C&quot;);">
+                                    <!---->
+                                    <component-preview-panels _ngcontent-dcy-c34="" class="hidden" _nghost-dcy-c32="" _msthidden="1">
+                                        <div _ngcontent-dcy-c32="" class="label relative" 
+                                            _msthidden="1">
+                                            <div _ngcontent-dcy-c32="" class="content py-3 text-center"
+                                                 _msthash="9450207" _msttexthash="325845"
+                                                _msthidden="1"> Maximaal <span _ngcontent-dcy-c32=""
+                                                    class="text-enie-orange-500" >86</span>
+                                                panelen </div>
+                                        </div>
+                                        <!---->
+                                    </component-preview-panels>
+                                    <!---->
+                                    <component-preview-detail _ngcontent-dcy-c34="" _nghost-dcy-c33=""
+                                        >
+                                        <div  class="label relative" >
+                                            <div 
+                                                class="cursor-pointer icon flex items-center justify-center text-white"
+                                                ><svg 
+                                                    xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
+                                                    stroke="currentColor" >
+                                                    <path  stroke-linecap="round"
+                                                        stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"
+                                                        ></path>
+                                                </svg></div>
+                                            <div  class="content heft" >
+                                                <div  class="text-enie-gray-500 pl-4 pr-6 text-sm"
+                                                    >
+                                                    <div 
+                                                        class="address md:flex md:flex-row md:justify-between"
+                                                        >
+                                                        <!---->
+                                                        <!---->
+                                                        <div  class="hidden md:block"
+                                                            >
+                                                            <div  
+                                                                _msthash="13379756" _msttexthash="74971">Slaak 26</div>
+                                                            <div  
+                                                                _msthash="13379757" _msttexthash="274066">3061SB,
+                                                                Rotterdam</div>
+                                                        </div>
+                                                        <div  class="md:hidden"
+                                                             _msthidden="2">
+                                                            <div  
+                                                                _msthash="13379758" _msttexthash="74971" _msthidden="1">
+                                                                Slaak 26</div>
+                                                            <div  
+                                                                _msthash="13379759" _msttexthash="274066"
+                                                                _msthidden="1">3061SB, Rotterdam</div>
+                                                        </div>
+                                                    </div>
+                                                    <!---->
+                                                </div>
+                                            </div>
+                                            <!---->
+                                            <!---->
+                                            <!---->
+                                        </div>
+                                        <!---->
+                                    </component-preview-detail>
+                                    <!---->
+                                    <!---->
+                                    <!---->
+                                    <!---->
+                                    <!---->
+                                    <!---->
+                                    <!---->
                                 </div>
-<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAy3V_xn_MZ0FQhniD4PAztdgHrH_ub4d4&libraries=places"></script>
-<script src="index.js"></script> 
-                              </div>
-                            </div>
-                          </div>
+                                <!---->
+                                <!---->
+                            </component-preview>
                         </div>
-           </configurator-power-usage>
-                    </app-root>
+                        <div  class="w-full md:col-span-9 relative overflow-hidden"
+                            >
+                            <!---->
+                            <div  class="p-8 pt-12 md:p-16 sm:overflow-auto h-full"
+                                >
+                                <router-outlet  ></router-outlet>
+                                <configurator-power-usage >
+                                    <div class="hidden md:block mb-8 md:mb-16" >
+                                        <component-header >
+                                            <div class="font-thin md:text-lg text-gray-600" 
+                                                _msthash="9231989" _msttexthash="670449">How many solar panels do I
+                                                need?</div>
+                                            <!---->
+                                            <div class="text-2xl md:text-3xl pb-2" 
+                                                _msthash="9231990" _msttexthash="265642"> Your power needs </div>
+                                            <div class="gradient w-16 md:w-20" ></div>
+                                        </component-header>
+                                    </div>
+                                    <!---->
+                                    <div class="mb-4 md:mb-8" >
+                                        <div class="text-lg leading-tight flex" >
+                                            <font _mstmutation="1" _msthash="6601816" _msttexthash="756769"
+                                                > What is your power consumption? </font><span
+                                                tooltip="" class="text-enie-gray-100" ><svg
+                                                    xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
+                                                    stroke="currentColor" class="h-4 w-4" >
+                                                    <path stroke-linecap="round" stroke-linejoin="round"
+                                                        stroke-width="2"
+                                                        d="M13 16h-1v-4h-1m1-4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"
+                                                        ></path>
+                                                </svg></span>
+                                            <!---->
+                                            <!---->
+                                        </div><a
+                                            class="font-thin text-enie-gray-100 text-sm underline hover:no-underline cursor-pointer"
+                                             _msthash="5870514" _msttexthash="815425">I don't
+                                            know my power consumption</a>
+                                    </div>
+                                    <div class="mb-8 md:mb-16" >
+                                        <component-input-group >
+                                            <div class="input-group" >
+                                                <component-input-text unit="kWh" id="stroomverbruik" valuetype="number"
+                                                    class="ng-untouched ng-pristine ng-invalid"
+                                                    >
+                                                    <div class="pb-3"  _msthash="452699"
+                                                        _msttexthash="331175">Power consumption</div>
+                                                    <div class="relative" ><input
+                                                            placeholder="placeholder" autocomplete="off"
+                                                            class="peer placeholder-transparent shadow-sm focus:ring-0 focus:border-gray-900 block w-full border-gray-400 rounded-md text-2xl ng-untouched ng-pristine ng-valid"
+                                                            id="stroomverbruik-input" type="number"
+                                                             _mstplaceholder="180427">
+                                                        <!---->
+                                                        <!----><label
+                                                            class="absolute left-2 bg-white transition-all peer-placeholder-shown:text-base peer-placeholder-shown:text-enie-gray-100 peer-focus:bg-white px-1 text-xs -top-2 peer-focus:text-xs text-gray-400 peer-focus:-top-2 peer-focus:text-gray-400 -top-3 text-gray-700 text-sm peer-focus:-top-3 peer-focus:text-gray-700 peer-focus:text-sm peer-placeholder-shown:top-3.5"
+                                                            for="stroomverbruik-input" 
+                                                            _msthash="759590" _msttexthash="288028">On an annual
+                                                            basis</label><span class="absolute right-2 top-3.5"
+                                                             _msthash="718146"
+                                                            _msttexthash="31369">Kwh</span>
+                                                        <!---->
+                                                    </div>
+                                                    <!---->
+                                                </component-input-text>
+                                            </div>
+                                        </component-input-group>
+                                    </div>
+                                    <!---->
+                                    <!---->
+                                    <!---->
+                                    <!---->
+                                    <div >
+                                        <a href="./config.html">
+                                        <button type="button"
+                                            class="button primary w-full md:w-auto"> Next step </button>
+                                        </a>
+                                    </div>
+                                    <!---->
+                                    <!---->
+                                </configurator-power-usage>
+                                <!---->
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!---->
+        </layout-main>
+        <!---->
+    </app-root>
 
+    <script type="application/javascript">
+        window.enableIntercomChat = function () {
+            if (window.intercomSettings && window.intercomSettings.app_id) {
+                return;
+            }
+
+            // Paste intercom snippet below
+            window.intercomSettings = {
+                ...window.intercomSettings,
+                app_id: "czmce6lo"
+            };
+
+            // We pre-filled your app ID in the widget URL: 'https://widget.intercom.io/widget/czmce6lo'
+            (function () {
+                var w = window;
+                var ic = w.Intercom;
+                if (typeof ic === "function") {
+                    ic('reattach_activator');
+                    ic('update', w.intercomSettings);
+                } else {
+                    var d = document;
+                    var i = function () {
+                        i.c(arguments);
+                    };
+                    i.q = [];
+                    i.c = function (args) {
+                        i.q.push(args);
+                    };
+                    w.Intercom = i;
+                    var l = function () {
+                        var s = d.createElement('script');
+                        s.type = 'text/javascript';
+                        s.async = true;
+                        s.src = 'https://widget.intercom.io/widget/czmce6lo';
+                        var x = d.getElementsByTagName('script')[0];
+                        x.parentNode.insertBefore(s, x);
+                    };
+                    if (document.readyState === 'complete') {
+                        l();
+                    } else if (w.attachEvent) {
+                        w.attachEvent('onload', l);
+                    } else {
+                        w.addEventListener('load', l, false);
+                    }
+                }
+            })();
+        }
+    </script>
+    <script src="./js/main.cec8dde35a9777017c28.js" defer></script>
+    <script src="./js/polyfills.c889dd02dce097ca3548.js" defer></script>
+    <script src="./js/runtime.ae9e5dc4364ctd489b72e.js" defer></script>
 
 </body>
+
 </html>
